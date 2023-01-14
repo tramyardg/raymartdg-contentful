@@ -127,6 +127,13 @@ exports.createSchemaCustomization = async ({ actions }) => {
       links: [HomepageLink]
     }
 
+    interface HomepageBanner implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      text: String
+    }
+
     interface HomepageFeature implements Node & HomepageBlock {
       id: ID!
       blocktype: String
